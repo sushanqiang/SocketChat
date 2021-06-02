@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/fakeStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/transparent" />
+
+    <ImageView
+        android:id="@+id/back_iv"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/fakeStatusBar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:src="@drawable/plvec_commodity_push_close" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/fakeStatusBar"
+        android:gravity="center"
+        android:text="对方信息" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_info"
+        android:background="@color/gray" />
+
+    <com.yzchat.socket.view.widget.messages.MessagesList
+        android:id="@+id/messagesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input"
+        android:layout_below="@+id/tv_info" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/input"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/gray" />
+
+    <com.yzchat.socket.view.widget.messages.MessageInput
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:attachmentButtonBackground="?attr/selectableItemBackgroundBorderless"
+        app:attachmentButtonDefaultIconColor="@color/green"
+        app:attachmentButtonDefaultIconPressedColor="@color/green_dark"
+        app:attachmentButtonHeight="27dp"
+        app:attachmentButtonWidth="27dp"
+        app:inputButtonBackground="@drawable/btn_green_selector"
+        app:inputButtonDefaultIconColor="@color/white"
+        app:inputButtonDefaultIconDisabledColor="@color/white_five"
+        app:inputHint="请输入"
+        app:showAttachmentButton="true" />
+
+</RelativeLayout>

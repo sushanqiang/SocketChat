@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/key_bar_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ed_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            style="@style/Commit_Button_Style"
+            android:background="@drawable/btn_green_selector"
+            android:enabled="false"
+            android:text="发送"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:enabled="true" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/text_color_3"
+            app:layout_constraintTop_toBottomOf="@id/sendBtn" />
+
+        <EditText
+            android:id="@+id/chat_input_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#ffffff"
+            android:gravity="center_vertical|left"
+            android:hint="跟大家聊点什么吧~"
+            android:imeOptions="actionSend|flagNoFullscreen|flagNoExtractUi"
+            android:maxLength="200"
+            android:paddingLeft="12dp"
+            android:paddingTop="15dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="35dp"
+            android:textColor="#333333"
+            android:textColorHint="#CDCDCD"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
